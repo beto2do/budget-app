@@ -1,1 +1,20 @@
-<p>table works!</p>
+<table class="w-full table-auto border-collapse text-sm">
+  <thead>
+    <tr>
+      <th [class]="headerCellClass">Totals</th>
+      <th [class]="headerCellClass">Estimate</th>
+      <th [class]="headerCellClass">Real</th>
+      <th [class]="headerCellClass">Diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(product of products(); track product.id) {
+      <tr>
+        <td [class]="dataCellClass">{{ product.name }}</td>
+        <td [class]="dataCellClass">{{ product.estimate }}</td>
+        <td [class]="dataCellClass">0</td>
+        <td [class]="dataCellClass">0</td>
+      </tr>
+    }
+  </tbody>
+</table>
