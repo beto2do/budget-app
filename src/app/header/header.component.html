@@ -1,7 +1,7 @@
 <section class="flex flex-row">
-  <h1>Monthly Budget</h1>
-  <div>
-    <label for="theme">Initial balance:</label>
-    <input type="text" placeholder="Search" />
+  <h1 class="p-4">Monthly Budget</h1>
+  <div class="p-4">
+    <label for="initialBalanceInput" class="pr-2">Initial balance:</label>
+    <input id="initialBalanceInput" type="number" placeholder="Amount.." (input)="changeBalance($event)" />
   </div>
 </section>

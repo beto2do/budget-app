@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'budget-header',
@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  initialBalanceChanged = output<number>();
 
+  changeBalance(event: Event) {
+    const target = event.target as HTMLInputElement | null;
+    if (target && target.value) {
+      this.initialBalanceChanged.emit(Number(target.value));
+    }
+  }
 }

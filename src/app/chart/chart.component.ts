@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'budget-chart',
@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class ChartComponent {
 
+  initialBalance = input(0);
 }

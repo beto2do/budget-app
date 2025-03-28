@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TableComponent } from './table/table.component';
 import { Product } from './models/product';
@@ -14,6 +14,7 @@ import { ComparisonBarsComponent } from './comparison-bars/comparison-bars.compo
 })
 export class AppComponent {
   title = 'budget';
+  initialBalance = signal<number>(0);
   products: Product[] = [
     {
       id: 1,
@@ -36,4 +37,9 @@ export class AppComponent {
       estimate: 400
     }
   ];
+
+  changeBalanceHandler(balance: number) {
+    this.initialBalance.set(balance);
+  }
+
 }

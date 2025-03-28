@@ -1,7 +1,7 @@
 <main class="md:w-6xl mx-auto">
-  <budget-header></budget-header>
+  <budget-header (initialBalanceChanged)="changeBalanceHandler($event)"></budget-header>
   <section class="flex flex-row">
-    <budget-chart></budget-chart>
+    <budget-chart [initialBalance]="initialBalance()"></budget-chart>
     <budget-balance-card></budget-balance-card>
   </section>
   <section class="flex flex-row">
