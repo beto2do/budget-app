@@ -1,6 +1,17 @@
 <main class="md:w-6xl mx-auto">
   <budget-header></budget-header>
-  <budget-table [products]="products"></budget-table>
+  <section class="flex flex-row">
+    <budget-chart></budget-chart>
+    <budget-balance-card></budget-balance-card>
+  </section>
+  <section class="flex flex-row">
+    <budget-comparison-bars></budget-comparison-bars>
+    <budget-comparison-bars></budget-comparison-bars>
+  </section>
+  <section class="flex flex-row">
+    <budget-table [products]="products"></budget-table>
+    <budget-table [products]="products"></budget-table>
+  </section>
 </main>
 
 <router-outlet />

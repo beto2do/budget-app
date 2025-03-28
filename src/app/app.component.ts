@@ -3,10 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { TableComponent } from './table/table.component';
 import { Product } from './models/product';
 import { HeaderComponent } from './header/header.component';
-
+import { ChartComponent } from './chart/chart.component';
+import { BalanceCardComponent } from './balance-card/balance-card.component';
+import { ComparisonBarsComponent } from './comparison-bars/comparison-bars.component';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TableComponent, HeaderComponent],
+  imports: [RouterOutlet, TableComponent, HeaderComponent,ChartComponent, BalanceCardComponent, ComparisonBarsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
