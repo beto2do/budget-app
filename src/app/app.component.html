@@ -1,17 +1,19 @@
 <main class="md:w-6xl mx-auto">
-  <budget-header (initialBalanceChanged)="changeBalanceHandler($event)"></budget-header>
-  <section class="flex flex-row">
+  <budget-section>
+    <budget-header (initialBalanceChanged)="changeBalanceHandler($event)"></budget-header>
+  </budget-section>
+  <budget-section>
     <budget-chart [initialBalance]="initialBalance()"></budget-chart>
     <budget-balance-card></budget-balance-card>
-  </section>
-  <section class="flex flex-row">
+  </budget-section>
+  <budget-section>
     <budget-comparison-bars></budget-comparison-bars>
     <budget-comparison-bars></budget-comparison-bars>
-  </section>
-  <section class="flex flex-row">
+  </budget-section>
+  <budget-section>
     <budget-table [products]="products"></budget-table>
     <budget-table [products]="products"></budget-table>
-  </section>
+  </budget-section>
 </main>
 
 <router-outlet />
