@@ -1,5 +1,7 @@
-<h1 class="p-4 text-orange-500">Monthly Budget</h1>
-<div class="p-4">
-  <label for="initialBalanceInput" class="pr-2">Initial balance:</label>
-  <input id="initialBalanceInput" type="number" placeholder="Amount.." (input)="changeBalance($event)" />
+<div class="flex flex-row">
+  <h1 class="text-orange-500 dark:text-orange-100">Monthly Budget</h1>
+  <div>
+    <label for="initialBalanceInput" class="pr-2 text-gray-900 dark:text-white">Initial balance:</label>
+    <input id="initialBalanceInput" type="number" placeholder="Amount.." (input)="changeBalance($event)" class="text-gray-900 dark:text-white" />
+  </div>
 </div>
