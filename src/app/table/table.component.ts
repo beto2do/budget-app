@@ -9,8 +9,9 @@ import { Product } from '../models/product';
 })
 export class TableComponent {
 
-  headerCellClass = 'border-b border-gray-200 p-4 pt-0 pb-3 pl-8 text-left font-medium';
-  dataCellClass = 'border-b border-gray-100 p-4 pl-8';
+  tableTitle = input.required<string>();
+  headerCellClass = 'border-b border-gray-200 p-4 pt-0 pb-3 pl-8 text-left font-medium text-gray-900 dark:text-white';
+  dataCellClass = 'border-b border-gray-100 p-4 pl-8 text-gray-900 dark:text-white';
 
   products = input.required<Product[]>();
 }
