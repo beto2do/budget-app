@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'budget-balance-card',
   imports: [],
   templateUrl: './balance-card.component.html',
-  styleUrl: './balance-card.component.css'
+  styleUrl: './balance-card.component.css',
 })
-export class BalanceCardComponent {
-
-}
+export class BalanceCardComponent {}

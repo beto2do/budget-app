@@ -1,9 +1,15 @@
 <main class="md:w-6xl mx-auto">
   <budget-section>
-    <budget-header class="basis-full p-4" (initialBalanceChanged)="changeBalanceHandler($event)"></budget-header>
+    <budget-header
+      class="basis-full p-4"
+      (initialBalanceChanged)="changeBalanceHandler($event)"
+    ></budget-header>
   </budget-section>
   <budget-section>
-    <budget-chart class="basis-1/2 p-4" [initialBalance]="initialBalance()"></budget-chart>
+    <budget-chart
+      class="basis-1/2 p-4"
+      [initialBalance]="initialBalance()"
+    ></budget-chart>
     <budget-balance-card class="basis-1/2 p-4"></budget-balance-card>
   </budget-section>
   <budget-section>
@@ -11,8 +17,16 @@
     <budget-comparison-bars class="basis-1/2 p-4"></budget-comparison-bars>
   </budget-section>
   <budget-section>
-    <budget-table class="basis-full lg:basis-1/2 p-4" tableTitle="Expenses" [products]="products"></budget-table>
-    <budget-table class="basis-full lg:basis-1/2 p-4" tableTitle="Incomes" [products]="products"></budget-table>
+    <budget-table
+      class="basis-full lg:basis-1/2 p-4"
+      tableTitle="Expenses"
+      [products]="products"
+    ></budget-table>
+    <budget-table
+      class="basis-full lg:basis-1/2 p-4"
+      tableTitle="Incomes"
+      [products]="products"
+    ></budget-table>
   </budget-section>
 </main>
 

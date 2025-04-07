@@ -4,7 +4,7 @@ import { Component, output } from '@angular/core';
   selector: 'budget-header',
   imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
 })
 export class HeaderComponent {
   initialBalanceChanged = output<number>();

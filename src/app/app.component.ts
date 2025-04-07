@@ -19,7 +19,7 @@ import { SectionComponent } from './section/section.component';
     SectionComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'budget';
@@ -28,27 +28,26 @@ export class AppComponent {
     {
       id: 1,
       name: 'Internet',
-      estimate: 100
+      estimate: 100,
     },
     {
       id: 2,
       name: 'Transportation',
-      estimate: 200
+      estimate: 200,
     },
     {
       id: 3,
       name: 'Water',
-      estimate: 300
+      estimate: 300,
     },
     {
       id: 4,
       name: 'Natural juice',
-      estimate: 400
-    }
+      estimate: 400,
+    },
   ];
 
   changeBalanceHandler(balance: number) {
     this.initialBalance.set(balance);
   }
-
 }

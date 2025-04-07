@@ -4,7 +4,12 @@
       <h3 class="text-orange-500">{{ tableTitle() }}</h3>
     </div>
     <div>
-      <button type="button" class="bg-slate-500 hover:bg-slate-700 dark:bg-slate-300 dark:hover:bg-slate-500 text-white dark:text-gray-900 font-bold py-2 px-4 rounded">Add Row</button>
+      <button
+        type="button"
+        class="bg-slate-500 hover:bg-slate-700 dark:bg-slate-300 dark:hover:bg-slate-500 text-white dark:text-gray-900 font-bold py-2 px-4 rounded"
+      >
+        Add Row
+      </button>
     </div>
   </div>
   <div>
@@ -18,7 +23,7 @@
         </tr>
       </thead>
       <tbody>
-        @for(product of products(); track product.id) {
+        @for (product of products(); track product.id) {
           <tr>
             <td [class]="dataCellClass">{{ product.name }}</td>
             <td [class]="dataCellClass">{{ product.estimate }}</td>

@@ -4,9 +4,8 @@ import { Component, input } from '@angular/core';
   selector: 'budget-chart',
   imports: [],
   templateUrl: './chart.component.html',
-  styleUrl: './chart.component.css'
+  styleUrl: './chart.component.css',
 })
 export class ChartComponent {
-
   initialBalance = input(0);
 }
