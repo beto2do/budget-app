@@ -4,12 +4,7 @@
       <h3 class="text-orange-500">{{ tableTitle() }}</h3>
     </div>
     <div>
-      <button
-        type="button"
-        class="bg-slate-500 hover:bg-slate-700 dark:bg-slate-300 dark:hover:bg-slate-500 text-white dark:text-gray-900 font-bold py-2 px-4 rounded"
-      >
-        Add Row
-      </button>
+      <budget-button (onClick)="addRow()" buttonText="Add Row"></budget-button>
     </div>
   </div>
   <div>
@@ -35,3 +30,11 @@
     </table>
   </div>
 </div>
+<budget-modal [isOpen]="isOpen">
+  <h2 class="text-xl font-bold mb-4">{{ tableTitle() }} Modal</h2>
+  <p class="mb-4">This is a modal message.</p>
+  <budget-button
+    (onClick)="closeModal()"
+    buttonText="Close Modal"
+  ></budget-button>
+</budget-modal>
