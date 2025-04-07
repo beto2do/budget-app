@@ -7,6 +7,7 @@ import { ChartComponent } from './chart/chart.component';
 import { BalanceCardComponent } from './balance-card/balance-card.component';
 import { ComparisonBarsComponent } from './comparison-bars/comparison-bars.component';
 import { SectionComponent } from './section/section.component';
+import { ChartComparisonComponent } from './chart-comparison/chart-comparison.component';
 @Component({
   selector: 'app-root',
   imports: [
@@ -14,6 +15,7 @@ import { SectionComponent } from './section/section.component';
     TableComponent,
     HeaderComponent,
     ChartComponent,
+    ChartComparisonComponent,
     BalanceCardComponent,
     ComparisonBarsComponent,
     SectionComponent,

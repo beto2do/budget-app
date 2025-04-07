@@ -6,10 +6,19 @@
     ></budget-header>
   </budget-section>
   <budget-section>
-    <budget-chart
-      class="basis-1/2 p-4"
-      [initialBalance]="initialBalance()"
-    ></budget-chart>
+    <budget-chart-comparison class="basis-1/2 p-4">
+      <budget-chart
+        label="Initial Balance"
+        [initialBalance]="initialBalance()"
+      ></budget-chart>
+      <div
+        class="border-l-1 border-slate-500 dark:border-slate-300 border-dashed"
+      ></div>
+      <budget-chart
+        label="End Balance"
+        [initialBalance]="initialBalance()"
+      ></budget-chart>
+    </budget-chart-comparison>
     <budget-balance-card class="basis-1/2 p-4"></budget-balance-card>
   </budget-section>
   <budget-section>

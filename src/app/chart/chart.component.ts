@@ -8,4 +8,5 @@ import { Component, input } from '@angular/core';
 })
 export class ChartComponent {
   initialBalance = input(0);
+  label = input.required<string>();
 }
