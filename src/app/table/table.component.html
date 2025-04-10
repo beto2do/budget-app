@@ -31,10 +31,29 @@
   </div>
 </div>
 <budget-modal [isOpen]="isOpen">
-  <h2 class="text-xl font-bold mb-4">{{ tableTitle() }} Modal</h2>
-  <p class="mb-4">This is a modal message.</p>
-  <budget-button
-    (onClick)="closeModal()"
-    buttonText="Close Modal"
-  ></budget-button>
+  <div class="flex flex-col gap-2">
+    <h2 class="text-xl font-bold mb-4">{{ tableTitle() }} Modal</h2>
+    <label [for]="'product_' + tableTitle()">Choose a Product</label>
+    <select
+      class="w-full p-2 border border-gray-300 rounded"
+      name="product"
+      [id]="'product_' + tableTitle()"
+    >
+      @for (product of products(); track product.id) {
+        <option [value]="product.id">
+          {{ product.name }}
+        </option>
+      }
+    </select>
+    <label [for]="'amount' + tableTitle()">Amount</label>
+    <input
+      [id]="'amount' + tableTitle()"
+      type="number"
+      class="w-full p-2 border border-gray-300 rounded"
+    />
+    <budget-button
+      (onClick)="closeModal()"
+      buttonText="Close Modal"
+    ></budget-button>
+  </div>
 </budget-modal>
