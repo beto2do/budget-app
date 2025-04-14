@@ -1,9 +1,11 @@
 import { Component, input } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'budget-chart',
-  imports: [],
   templateUrl: './chart.component.html',
+  imports: [CurrencyPipe],
+  standalone: true,
   styleUrl: './chart.component.css',
 })
 export class ChartComponent {
