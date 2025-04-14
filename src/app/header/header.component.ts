@@ -1,4 +1,4 @@
-import { Component, output } from '@angular/core';
+import { Component, model } from '@angular/core';
 
 @Component({
   selector: 'budget-header',
@@ -7,12 +7,12 @@ import { Component, output } from '@angular/core';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  initialBalanceChanged = output<number>();
+  initialBalanceChanged = model<number>();
 
   changeBalance(event: Event) {
     const target = event.target as HTMLInputElement | null;
     if (target && target.value) {
-      this.initialBalanceChanged.emit(Number(target.value));
+      this.initialBalanceChanged.update(() => Number(target.value));
     }
   }
 }

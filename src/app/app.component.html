@@ -2,7 +2,7 @@
   <budget-section>
     <budget-header
       class="basis-full p-4"
-      (initialBalanceChanged)="changeBalanceHandler($event)"
+      [(initialBalanceChanged)]="initialBalance"
     ></budget-header>
   </budget-section>
   <budget-section>
