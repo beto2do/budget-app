@@ -4,7 +4,7 @@
       <h3 class="text-orange-500">{{ tableTitle() }}</h3>
     </div>
     <div>
-      <budget-button (onClick)="addRow()" buttonText="Add Row"></budget-button>
+      <button budgetButton (click)="addRow()">Add Row</button>
     </div>
   </div>
   <div>
@@ -51,9 +51,6 @@
       type="number"
       class="w-full p-2 border border-gray-300 rounded"
     />
-    <budget-button
-      (onClick)="closeModal()"
-      buttonText="Close Modal"
-    ></budget-button>
+    <button budgetButton (click)="closeModal()">Close Modal</button>
   </div>
 </budget-modal>

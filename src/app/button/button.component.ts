@@ -1,19 +1,12 @@
-import { Component, output, input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'budget-button',
+  selector: 'button[budgetButton]',
   imports: [],
-  templateUrl: './button.component.html',
-  styleUrl: './button.component.css',
+  template: `<ng-content />`,
+  host: {
+    class:
+      'bg-slate-500 hover:bg-slate-700 dark:bg-slate-300 dark:hover:bg-slate-500 text-white dark:text-gray-900 font-bold py-2 px-4 rounded',
+  },
 })
-export class ButtonComponent {
-  buttonText = input.required<string>();
-
-  onClick = output<MouseEvent>();
-
-  clickButton($event: MouseEvent) {
-    $event.preventDefault();
-    $event.stopPropagation();
-    this.onClick.emit($event);
-  }
-}
+export class ButtonComponent {}
