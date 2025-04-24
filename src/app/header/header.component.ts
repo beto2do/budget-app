@@ -1,8 +1,9 @@
 import { Component, model } from '@angular/core';
+import { OrangeColorDirective } from '../directives/orange-color.directive';
 
 @Component({
   selector: 'budget-header',
-  imports: [],
+  imports: [OrangeColorDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })

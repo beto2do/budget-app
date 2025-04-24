@@ -2,10 +2,11 @@ import { Component, ViewEncapsulation, input } from '@angular/core';
 import { Product } from '../models/product';
 import { ModalComponent } from '../modal/modal.component';
 import { ButtonComponent } from '../button/button.component';
+import { OrangeColorDirective } from '../directives/orange-color.directive';
 
 @Component({
   selector: 'budget-table',
-  imports: [ModalComponent, ButtonComponent],
+  imports: [ModalComponent, ButtonComponent, OrangeColorDirective],
   templateUrl: './table.component.html',
   encapsulation: ViewEncapsulation.None,
 })
