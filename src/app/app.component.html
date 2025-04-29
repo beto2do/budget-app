@@ -1,42 +1,25 @@
+<nav>
+  <ul>
+    <li>
+      <a
+        routerLink="/summary"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+      >
+        Summary
+      </a>
+    </li>
+    <li>
+      <a
+        routerLink="/transactions"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+      >
+        Transactions
+      </a>
+    </li>
+  </ul>
+</nav>
 <main class="md:w-6xl mx-auto">
-  <budget-section>
-    <budget-header
-      class="basis-full p-4"
-      [(initialBalanceChanged)]="initialBalance"
-    ></budget-header>
-  </budget-section>
-  <budget-section>
-    <budget-chart-comparison class="basis-1/2 p-4">
-      <budget-chart
-        label="Initial Balance"
-        [initialBalance]="initialBalance()"
-      ></budget-chart>
-      <div
-        class="border-l-1 border-slate-500 dark:border-slate-300 border-dashed"
-      ></div>
-      <budget-chart
-        label="End Balance"
-        [initialBalance]="initialBalance()"
-      ></budget-chart>
-    </budget-chart-comparison>
-    <budget-balance-card class="basis-1/2 p-4"></budget-balance-card>
-  </budget-section>
-  <budget-section>
-    <budget-comparison-bars class="basis-1/2 p-4"></budget-comparison-bars>
-    <budget-comparison-bars class="basis-1/2 p-4"></budget-comparison-bars>
-  </budget-section>
-  <budget-section>
-    <budget-table
-      class="basis-full lg:basis-1/2 p-4"
-      tableTitle="Expenses"
-      [products]="products"
-    ></budget-table>
-    <budget-table
-      class="basis-full lg:basis-1/2 p-4"
-      tableTitle="Incomes"
-      [products]="products"
-    ></budget-table>
-  </budget-section>
+  <router-outlet />
 </main>
-
-<router-outlet />
