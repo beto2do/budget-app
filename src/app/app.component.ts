@@ -8,6 +8,7 @@ import { BalanceCardComponent } from './balance-card/balance-card.component';
 import { ComparisonBarsComponent } from './comparison-bars/comparison-bars.component';
 import { SectionComponent } from './section/section.component';
 import { ChartComparisonComponent } from './chart-comparison/chart-comparison.component';
+import { BudgetService } from './services/budget.service';
 @Component({
   selector: 'app-root',
   imports: [
@@ -26,28 +27,11 @@ import { ChartComparisonComponent } from './chart-comparison/chart-comparison.co
 export class AppComponent {
   title = 'budget';
   initialBalance = signal<number>(0);
-  products: Product[] = [
-    {
-      id: 1,
-      name: 'Internet',
-      estimate: 100,
-    },
-    {
-      id: 2,
-      name: 'Transportation',
-      estimate: 200,
-    },
-    {
-      id: 3,
-      name: 'Water',
-      estimate: 300,
-    },
-    {
-      id: 4,
-      name: 'Natural juice',
-      estimate: 400,
-    },
-  ];
+  products: Product[] = [];
+
+  constructor(private budgetService: BudgetService) {
+    this.products = this.budgetService.getProducts();
+  }
 
   changeBalanceHandler(balance: number) {
     this.initialBalance.set(balance);
