@@ -36,4 +36,12 @@ export class BudgetService {
       },
     ];
   }
+
+  fetchProducts(): Promise<Product[]> {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(this.getProducts());
+      }, 1000);
+    });
+  }
 }

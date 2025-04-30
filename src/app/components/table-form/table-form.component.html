@@ -1,0 +1,25 @@
+<form [formGroup]="tableForm" (ngSubmit)="onSubmit()">
+  <label for="product">Choose a Product</label>
+  <select
+    formControlName="product"
+    class="w-full p-2 border border-gray-300 rounded"
+    name="product"
+    id="product"
+  >
+    @for (product of products(); track product.id) {
+      <option [value]="product.id">
+        {{ product.name }}
+      </option>
+    }
+  </select>
+  <label for="amount">Amount</label>
+  <input
+    id="amount"
+    type="number"
+    formControlName="amount"
+    class="w-full p-2 border border-gray-300 rounded"
+  />
+  <button budgetButton [disabled]="!tableForm.valid" type="submit">
+    submit
+  </button>
+</form>

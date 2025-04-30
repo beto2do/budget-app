@@ -33,24 +33,7 @@
 <budget-modal [isOpen]="isOpen">
   <div class="flex flex-col gap-2">
     <h2 class="text-xl font-bold mb-4">{{ tableTitle() }} Modal</h2>
-    <label [for]="'product_' + tableTitle()">Choose a Product</label>
-    <select
-      class="w-full p-2 border border-gray-300 rounded"
-      name="product"
-      [id]="'product_' + tableTitle()"
-    >
-      @for (product of products(); track product.id) {
-        <option [value]="product.id">
-          {{ product.name }}
-        </option>
-      }
-    </select>
-    <label [for]="'amount' + tableTitle()">Amount</label>
-    <input
-      [id]="'amount' + tableTitle()"
-      type="number"
-      class="w-full p-2 border border-gray-300 rounded"
-    />
+    <budget-table-form />
     <button budgetButton (click)="closeModal()">Close Modal</button>
   </div>
 </budget-modal>

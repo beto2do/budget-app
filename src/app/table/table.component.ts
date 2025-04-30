@@ -3,10 +3,16 @@ import { Product } from '../models/product';
 import { ModalComponent } from '../modal/modal.component';
 import { ButtonComponent } from '../button/button.component';
 import { OrangeColorDirective } from '../directives/orange-color.directive';
+import { TableFormComponent } from '../components/table-form/table-form.component';
 
 @Component({
   selector: 'budget-table',
-  imports: [ModalComponent, ButtonComponent, OrangeColorDirective],
+  imports: [
+    ModalComponent,
+    ButtonComponent,
+    OrangeColorDirective,
+    TableFormComponent,
+  ],
   templateUrl: './table.component.html',
   encapsulation: ViewEncapsulation.None,
 })
