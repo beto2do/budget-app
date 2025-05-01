@@ -21,7 +21,7 @@ export class TableFormComponent {
   products = signal<Product[]>([]);
 
   constructor() {
-    this.tableForm = this.formBuilder.group({
+    this.tableForm = this.formBuilder.nonNullable.group({
       amount: ['', [Validators.required, Validators.min(0)]],
       product: ['', [Validators.required]],
     });
