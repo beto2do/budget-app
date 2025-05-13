@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation, input } from '@angular/core';
 import { Product } from '../models/product';
-import { ModalComponent } from '../modal/modal.component';
+import { ModalComponent } from '../components/modal/modal.component';
 import { ButtonComponent } from '../button/button.component';
 import { OrangeColorDirective } from '../directives/orange-color.directive';
 import { TableFormComponent } from '../components/table-form/table-form.component';
