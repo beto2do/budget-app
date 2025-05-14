@@ -12,6 +12,14 @@
       </option>
     }
   </select>
+  @if (
+    tableForm.get("product")?.invalid &&
+    (tableForm.get("product")?.touched || tableForm.get("product")?.dirty)
+  ) {
+    @if (tableForm.get("product")?.hasError("required")) {
+      <p class="text-red-500">Product is required</p>
+    }
+  }
   <label for="amount">Amount</label>
   <input
     id="amount"
@@ -19,6 +27,17 @@
     formControlName="amount"
     class="w-full p-2 border border-gray-300 rounded"
   />
+  @if (
+    tableForm.get("amount")?.invalid &&
+    (tableForm.get("amount")?.touched || tableForm.get("amount")?.dirty)
+  ) {
+    @if (tableForm.get("amount")?.hasError("required")) {
+      <p class="text-red-500">Amount is required</p>
+    }
+    @if (tableForm.get("amount")?.hasError("min")) {
+      <p class="text-red-500">Amount must be a positive number</p>
+    }
+  }
   <button budgetButton [disabled]="!tableForm.valid" type="submit">
     submit
   </button>
