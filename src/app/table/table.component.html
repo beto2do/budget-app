@@ -33,7 +33,7 @@
 <budget-modal [isOpen]="isOpen">
   <div class="flex flex-col gap-2">
     <h2 class="text-xl font-bold mb-4">{{ tableTitle() }} Modal</h2>
-    <budget-table-form />
+    <budget-form-expense [controllers]="controllers$ | async" />
     <button budgetButton (click)="closeModal()">Close Modal</button>
   </div>
 </budget-modal>

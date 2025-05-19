@@ -1,0 +1,33 @@
+<div [formGroup]="form()">
+  <label [attr.for]="controller().key">{{ controller().label }}</label>
+
+  <div>
+    @switch (controller().controlType) {
+      @case ("textbox") {
+        <input
+          [formControlName]="controller().key"
+          [id]="controller().key"
+          [type]="controller().type"
+          class="w-full p-2 border border-gray-300 rounded"
+        />
+      }
+      @case ("dropdown") {
+        <select
+          [formControlName]="controller().key"
+          [id]="controller().key"
+          class="w-full p-2 border border-gray-300 rounded"
+        >
+          @for (opt of controller().options; track opt.key) {
+            <option [value]="opt.key">
+              {{ opt.value }}
+            </option>
+          }
+        </select>
+      }
+    }
+  </div>
+
+  @if (!isValid) {
+    <p class="text-red-500">{{ controller().label }} is required</p>
+  }
+</div>
