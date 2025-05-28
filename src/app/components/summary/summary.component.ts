@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { SectionComponent } from '../../section/section.component';
-import { TableComponent } from '../../table/table.component';
+import { TableComponent } from '../table/table.component';
 import { HeaderComponent } from '../header/header.component';
 import { ChartComponent } from '../../chart/chart.component';
 import { ChartComparisonComponent } from '../../chart-comparison/chart-comparison.component';

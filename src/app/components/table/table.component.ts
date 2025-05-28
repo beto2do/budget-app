@@ -1,11 +1,11 @@
 import { Component, ViewEncapsulation, input, inject } from '@angular/core';
-import { Product } from '../models/product';
-import { ModalComponent } from '../components/modal/modal.component';
-import { ButtonComponent } from '../button/button.component';
-import { OrangeColorDirective } from '../directives/orange-color.directive';
-import { FormExpenseComponent } from '../components/form-expense/form-expense.component';
-import { FormControllerService } from '../services/form-controller.service';
-import { ControlBase } from '../models/form-base';
+import { Product } from '../../models/product';
+import { ModalComponent } from '../modal/modal.component';
+import { ButtonComponent } from '../../button/button.component';
+import { OrangeColorDirective } from '../../directives/orange-color.directive';
+import { FormExpenseComponent } from '../form-expense/form-expense.component';
+import { FormControllerService } from '../../services/form-controller.service';
+import { ControlBase } from '../../models/form-base';
 import { AsyncPipe } from '@angular/common';
 import { Observable } from 'rxjs';
 @Component({
