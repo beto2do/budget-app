@@ -12,6 +12,7 @@ describe('ModalComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(ModalComponent);
+    fixture.componentRef.setInput('isOpen', true);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
