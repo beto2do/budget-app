@@ -1,11 +1,10 @@
 import { Component, model } from '@angular/core';
-import { OrangeColorDirective } from '../directives/orange-color.directive';
+import { OrangeColorDirective } from '../../directives/orange-color.directive';
 
 @Component({
   selector: 'budget-header',
   imports: [OrangeColorDirective],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
 })
 export class HeaderComponent {
   initialBalanceChanged = model<number>();
