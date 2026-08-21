@@ -1,4 +1,9 @@
-import { Component, inject, input } from '@angular/core';
+import {
+  Component,
+  inject,
+  input,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { DynamicFormControllerComponent } from '../dynamic-form-controller/dynamic-form-controller.component';
 import { ControlBase } from '../../models/form-base';
@@ -13,6 +18,7 @@ import { ButtonComponent } from '../../button/button.component';
     DynamicFormControllerComponent,
     ButtonComponent,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './form-expense.component.html',
 })
 export class FormExpenseComponent {

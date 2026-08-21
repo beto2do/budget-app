@@ -1,10 +1,11 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'budget-chart',
   templateUrl: './chart.component.html',
   imports: [CurrencyPipe],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: true,
 })
 export class ChartComponent {

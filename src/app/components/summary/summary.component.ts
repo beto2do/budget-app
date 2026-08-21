@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { SectionComponent } from '../../section/section.component';
 import { TableComponent } from '../table/table.component';
 import { HeaderComponent } from '../header/header.component';
@@ -20,6 +20,7 @@ import { BudgetService } from '../../services/budget.service';
     BalanceCardComponent,
     ComparisonBarsComponent,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './summary.component.html',
 })
 export class SummaryComponent {

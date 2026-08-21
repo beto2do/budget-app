@@ -1,4 +1,9 @@
-import { Component, signal, inject } from '@angular/core';
+import {
+  Component,
+  signal,
+  inject,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -12,6 +17,7 @@ import { ButtonComponent } from '../../button/button.component';
 @Component({
   selector: 'budget-table-form',
   imports: [ReactiveFormsModule, ButtonComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './table-form.component.html',
 })
 export class TableFormComponent {

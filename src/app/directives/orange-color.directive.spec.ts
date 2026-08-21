@@ -1,10 +1,15 @@
-import { Component, DebugElement } from '@angular/core';
+import {
+  Component,
+  DebugElement,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { OrangeColorDirective } from './orange-color.directive';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 @Component({
   template: ` <h1 budgetOrangeColor>Test Budget</h1>`,
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [OrangeColorDirective],
 })
 class TestColorComponent {}

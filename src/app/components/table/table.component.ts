@@ -1,4 +1,10 @@
-import { Component, ViewEncapsulation, input, inject } from '@angular/core';
+import {
+  Component,
+  ViewEncapsulation,
+  input,
+  inject,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { Product } from '../../models/product';
 import { ModalComponent } from '../modal/modal.component';
 import { ButtonComponent } from '../../button/button.component';
@@ -19,6 +25,7 @@ import { Observable } from 'rxjs';
     AsyncPipe,
   ],
   templateUrl: './table.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   encapsulation: ViewEncapsulation.None,
 })
 export class TableComponent {
